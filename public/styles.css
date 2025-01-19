@@ -1,3 +1,5 @@
+/* sets the pink background */
+
 body{
 
     background-color: pink;
@@ -5,12 +7,19 @@ body{
     padding: 0;
 }
 
-h1{
-    text-align: center;
-    margin-top: 20px;
-    color: black;
-}
+/* makes the purple header, font white & bold and 2rem, aligning to the center, etc. */
 
+header {
+    background-color: purple;
+    color: white;
+    width: 100%;
+    padding:  2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  /* arranges stuff vertically, aligning them to the center, adjusting space, etc. */
 
 .subject-container {
     display: flex;
@@ -22,8 +31,11 @@ h1{
     max-width: 600px;
 }
 
+/* a darker pink-purple color for the box surrounding 'choose file', changes cursor to a pointer when 
+hovering on top of the button. */
+
 .subject-box {
-    background-color: purple;
+    background-color: rgb(234, 95, 215);
     border: 5px solid black;
     padding: 15px 20px;
     text-align: center;
@@ -31,13 +43,17 @@ h1{
     cursor: pointer;
 }
 
+
+/* changes the color to a lighter pink when hovered over the boxes */
+
 .subject-box:hover {
     transform: scale(1.05);
-    background-color: pink;
+    background-color: rgb(237, 155, 231);
 }
 
+/* makes the text black and bold */
+
  .subject-box a {
-    text-decoration: none;
     color: black;
     font-weight: bold;
 }
