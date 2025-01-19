@@ -23,7 +23,7 @@ h1{
 }
 
 .subject-box {
-    background-color: pink;
+    background-color: purple;
     border: 5px solid black;
     padding: 15px 20px;
     text-align: center;
@@ -33,7 +33,7 @@ h1{
 
 .subject-box:hover {
     transform: scale(1.05);
-    background-color: purple;
+    background-color: pink;
 }
 
  .subject-box a {
