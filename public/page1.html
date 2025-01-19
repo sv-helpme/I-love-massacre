@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Study Guide</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- links style.css to style the page, keepingg the design separate from the html content for cleaner code -->
+    
 </head>
 <body>
+    
     <h1>Study Notes</h1>
+
+    <!-- creates buttons: math, chem, eng, and econ, to take the user to different courses and relevant files/study guides uploaded within them -->
+    <!-- button: creates a clickable button, class: assigns a css class to style it, onclick: sends the user to the relevant page after button is clicked -->
     <div class="subject-container">
         <button class="subject-box" onclick="location.href='math.html'">Math</button>
     </div>
+    
     <div class="subject-container">
         <button class="subject-box" onclick="location.href='chem.html'">Chemistry</button>
     </div>
+    
     <div class="subject-container">
         <button class="subject-box" onclick="location.href='eng.html'">English</button>
     </div>
+    
     <div class="subject-container">
         <button class="subject-box" onclick="location.href='econ.html'">Economics</button>
     </div>
+    
 </body>
 </html>
