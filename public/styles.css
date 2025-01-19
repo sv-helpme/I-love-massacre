@@ -1,7 +1,6 @@
 body{
 
-    background-color: lightpink;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: pink;
     margin: 0;
     padding: 0;
 }
@@ -24,23 +23,21 @@ h1{
 }
 
 .subject-box {
-    background-color: #d2b0cf;
-    border: 5px solid #000;
-    border-radius: 8px;
+    background-color: pink;
+    border: 5px solid black;
     padding: 15px 20px;
     text-align: center;
     width: 100%;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
 }
 
 .subject-box:hover {
     transform: scale(1.05);
-    background-color: #d3b3f1;
+    background-color: purple;
 }
 
  .subject-box a {
     text-decoration: none;
-    color: #000;
+    color: black;
     font-weight: bold;
 }
