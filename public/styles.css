@@ -57,3 +57,11 @@ hovering on top of the button. */
     color: black;
     font-weight: bold;
 }
+
+/* make h1 centre*/
+h1 {
+    text-align: center;
+    margin-top: 1rem; /* margin top & bottom makes the font spaced 1rem above the items above/below */
+    margin-bottom: 1rem;
+    color: rgb(124, 25, 163);
+}
