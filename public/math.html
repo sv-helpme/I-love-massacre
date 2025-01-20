@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Math Notes</title>
-
-    <link rel="stylesheet" href="style.css"> <!-- refers to style.css to style stuff in this html file -->
-
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-
-    <header> <!-- header name -->
+    <header> 
         Math Study Guide Links
     </header>
-
-    <div class="container"> <!-- styled using container class in css, pink background -->
-        <h1>View Math Notes</h1> <!-- main heading inside container, explaining purpose -->
-        <!-- action: sends data to the url '/upload', method: uses POST, 
-         which is a request method so that a web server accepts the data and stores it.-->
+    <div class="container"> 
+        <h1>View Math Notes</h1> 
         <form action="/upload" method="POST" enctype="multipart/form-data"> 
-            <!-- multiple allows users multiple files, required makes the form submit only when something's uploaded-->
             <input type="file" name="uploadedFiles" multiple required /> 
-            <button type="submit">Upload</button> <!-- name of the button -->
+            <button type="submit">Upload</button> 
         </form>        
         <h2>Available Files</h2>
-        <!-- <ul> is an unordered list, containing the list of available files. -->
         <ul id="fileList"></ul> 
     </div>
-
     <script>
-        async function fetchFiles() {
+        async function getfiles() {
             const response = await fetch('/math/files');
             const files = await response.json();
             const fileList = document.getElementById('fileList');
@@ -41,7 +32,7 @@
                 fileList.appendChild(listItem);
             });
         }
-        fetchFiles();
+        getfiles();
     </script>
 
 </body>
