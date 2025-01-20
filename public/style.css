@@ -18,7 +18,7 @@ body {
 /* adds a purple header at the top, displaying 'course study guide links' */
 
   header {
-    background-color: purple;
+    background-color: rgb(126, 1, 126);
     color: white;
     width: 100%;
     padding:  2rem;
@@ -30,7 +30,7 @@ body {
 /* makes the background pink, aligns text in it to the center */
 
   .container {
-    background: pink;
+    background: rgb(250, 188, 198);
     padding: 1rem;
     width: 100%;
     min-height: 100vh; /*to extend the pink bg until the end of the page */
@@ -39,7 +39,7 @@ body {
 
 /* aligns headings to the center within their container */
 
-h1, h2 {
+h1 {
     text-align: center;
     margin-top: 1rem; /* margin top & bottom makes the font spaced 1rem above the items above/below */
     margin-bottom: 1rem;
