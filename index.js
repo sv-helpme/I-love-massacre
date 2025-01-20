@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         const referer = req.headers.referer || '';
         const subject = referer.split('/').pop().split('.')[0]; 
-        const uploadDir = `uploads/${subject}`;
+        const uploadDir = `upload/${subject}`;
         
         cb(null, uploadDir); 
     },
@@ -25,7 +25,7 @@ const upload = multer({ storage: storage });
 
 // makes "public" and "uploads" files available to ppl using server
 app.use(express.static('public'));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/upload', express.static(path.join(__dirname, 'upload')));
 
 // first page when u get onto server
 app.get('/', (req, res) => {
@@ -44,9 +44,9 @@ app.post('/upload', upload.array('uploadedFiles', 10), (req, res) => {
 });
 
 
-// get the file names for "uploads/math" directory in an array to list
+// get the file names for "uploads/math" directory in an array to list //ON GITHUB changed uploads to upload because of err w empty folders
 app.get('/math/files', (req, res) => {
-    const directoryPath = 'uploads/math/';
+    const directoryPath = 'upload/math/';
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
             res.status(500).send('Unable to scan directory.');
@@ -59,7 +59,7 @@ app.get('/math/files', (req, res) => {
 
 // same thing but for "uploads/chem"
 app.get('/chem/files', (req, res) => {
-    const directoryPath = 'uploads/chem/';
+    const directoryPath = 'upload/chem/';
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
             res.status(500).send('Unable to scan directory.');
@@ -71,7 +71,7 @@ app.get('/chem/files', (req, res) => {
 
 // "uploads/econ"
 app.get('/econ/files', (req, res) => {
-    const directoryPath = 'uploads/econ/';
+    const directoryPath = 'upload/econ/';
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
             res.status(500).send('Unable to scan directory.');
@@ -83,7 +83,7 @@ app.get('/econ/files', (req, res) => {
 
 // "uploads/eng"
 app.get('/eng/files', (req, res) => {
-    const directoryPath = 'uploads/eng/';
+    const directoryPath = 'upload/eng/';
     fs.readdir(directoryPath, (err, files) => {
         if (err) {
             res.status(500).send('Unable to scan directory.');
